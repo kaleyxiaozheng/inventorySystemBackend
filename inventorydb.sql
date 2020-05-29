@@ -100,3 +100,6 @@ CREATE TABLE app_order (
     total_price NUMERIC,
     customer_information JSON
 );
+
+-- alter app_order table by adding order_status
+ALTER TABLE app_order ADD COLUMN order_status INTEGER;
