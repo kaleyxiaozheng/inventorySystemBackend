@@ -27,6 +27,13 @@ CREATE TABLE department (
     department_description VARCHAR(255)
 );
 
+CREATE TABLE cart (
+    order_id INTEGER UNIQUE NOT NULL,
+    product_id Integer NOT NULL,
+    product_description VARCHAR(255),
+    product_quantitiy INTEGER
+);
+
 CREATE TABLE vehicle (
     vehicle_id INTEGER UNIQUE NOT NULL,
     vehicle_register VARCHAR(50) UNIQUE NOT NULL,
@@ -98,8 +105,26 @@ CREATE TABLE app_order (
     product_list JSON,
     expected_delivery_date DATE,
     total_price NUMERIC,
-    customer_information JSON
+    customer_information JSON,
+    order_status INTEGER
 );
 
--- alter app_order table by adding order_status
-ALTER TABLE app_order ADD COLUMN order_status INTEGER;
+CREATE TABLE logistics (
+    manufacturer_id INTEGER  NOT NULL,
+    manufacturer_name VARCHAR(255) NOT NULL,
+    product_id INTEGER NOT NULL
+);
+
+CREATE TABLE supply (
+    supplier_id INTEGER  NOT NULL,
+    supplier_name VARCHAR(255) NOT NULL,
+    product_id INTEGER NOT NULL
+);
+
+CREATE TABLE production (
+    warehouse_id INTEGER  NOT NULL,
+    manufacturer_name VARCHAR(255) NOT NULL,
+    number_and_stress VARCHAR(255) NOT NULL,
+    suburb_id INTEGER,
+    city_id INTEGER
+);
