@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
 import './Button.css'; // Tell webpack that Button.js uses these styles
 
-export class Button1 extends Component {
+export class Login_Signup_Button extends Component {
   render() {
     // You can use them as regular CSS styles
     return (
