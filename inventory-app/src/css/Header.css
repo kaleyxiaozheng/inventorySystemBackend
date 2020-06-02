@@ -1,22 +1,33 @@
-.row:after{
-    clear:both;
-    display: table;
-    content:"";
-  }
-  
-  .row{
-    height: 60px;
-  }
-  
-  .App-title{
-    color: black;
-    text-align: left;
-    text-indent: 40mm;
-    float: left;
-  }
-  
-  .Access-app{
-    padding-top: 14px;
-    padding-left: 700px;
+  .headerArea {
     display: flex;
+    height: 70px;
   }
+  
+   .leftHeader {
+      width: 40%;
+  }
+
+  .centreHeader {
+    width: 33%;
+    display: flex;
+    margin: auto;
+    padding: 10px;
+}
+  
+  .rightHeader {
+    width: auto;
+    display: flex;
+    margin: auto;
+    padding-top: 28px;
+    /* padding: 40px; */
+  }
+
+  .invenLogo {
+      height: 50px;
+  }
+
+  .invenTitle {
+      padding-left: 15px;
+  }
+
+ 

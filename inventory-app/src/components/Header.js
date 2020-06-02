@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
 import '../css/Header.css';
 import { LabelButtonRouter } from './Button';
+import invenLogo from '../logo/InvenLogo.png';
 
 export class Header extends Component {
     render() {
         return (
-            <div>
-                <div className="row">
-                    <div className="App-title">
+            <div className="headerArea">
+                <div className="leftHeader"></div>
+                <div className="centreHeader">
+                    <div>
+                    <img className="invenLogo" src={invenLogo} />
+                    </div>
+                    <div className="invenTitle">
                         <h3>AIMS</h3>
                     </div>
-                    <div className="Access-app">
-                        <LabelButtonRouter label="Admin" path="/Admin"></LabelButtonRouter>
-                        <LabelButtonRouter label="Sign up" path="/App"></LabelButtonRouter>
-                    </div>
+                </div>
+                <div className="rightHeader">
+                    <LabelButtonRouter label="Login" path="/Login"></LabelButtonRouter>
+                    <LabelButtonRouter label="Sign up" path="/Signup"></LabelButtonRouter>
                 </div>
             </div>
         );

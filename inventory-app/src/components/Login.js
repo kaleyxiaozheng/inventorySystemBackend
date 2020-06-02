@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import '../css/Admin.css';
+import '../css/Login.css';
 import {Link} from "react-router-dom";
 
-export class Admin extends Component{
+export class Login extends Component{
     render(){
         return(
-            <div>
-                <h3>Admin</h3>
+            <div className="adminArea">
+                <h3>Login</h3>
                 <Link to="/" >back</Link>
             </div>
         );
