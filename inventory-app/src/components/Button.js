@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { Button } from '@material-ui/core';
-// import './css/Button.css';
-import {
-  withRouter
-} from 'react-router-dom';
+import {Button} from '@material-ui/core';
+import '../css/Button.css';
+import {withRouter} from 'react-router-dom';
 
 class LabelButton extends Component {
   render() {
@@ -17,4 +15,4 @@ class LabelButton extends Component {
   }
 }
 
-export default withRouter(LabelButton);
+export const LabelButtonRouter =  withRouter(LabelButton);

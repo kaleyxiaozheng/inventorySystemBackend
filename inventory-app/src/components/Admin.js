@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../css/Admin.css';
-import { HashRouter, Link, BrowserRouter } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export class Admin extends Component{
     render(){
