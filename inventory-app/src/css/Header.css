@@ -11,14 +11,12 @@
   .App-title{
     color: black;
     text-align: left;
-    text-indent: 60mm;
+    text-indent: 40mm;
     float: left;
   }
   
-  .Label-button{
-    padding: 20px;
-    float: right;
-    padding-right: 200px;
+  .Access-app{
+    padding-top: 14px;
+    padding-left: 700px;
     display: flex;
   }
-   

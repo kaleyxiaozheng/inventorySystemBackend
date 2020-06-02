@@ -1,0 +1,13 @@
+.row {
+    display: flex;
+}
+
+.adbLogo {
+    padding-left: 80px;
+}
+
+.adbname {
+    padding-left: 20px;
+    font-weight: bolder;
+    padding-top: 15px;
+}

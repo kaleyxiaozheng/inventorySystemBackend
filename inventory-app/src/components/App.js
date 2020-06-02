@@ -5,6 +5,7 @@ import { Admin } from './Admin';
 import { Route } from "react-router";
 import { Header } from "./Header";
 import { Body } from "./Body";
+import { Footer } from "./Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="/Admin" component={Admin} />
       <Header />
       <Body />
+      <Footer />
     </BrowserRouter>
   );
 }

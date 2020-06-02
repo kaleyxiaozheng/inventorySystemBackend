@@ -8,11 +8,11 @@ export class Header extends Component {
             <div>
                 <div className="row">
                     <div className="App-title">
-                        <h3>Inventory Management</h3>
+                        <h3>AIMS</h3>
                     </div>
                     <div className="Access-app">
-                        <LabelButtonRouter label={this.props.label} path={`/${this.props.label}`}></LabelButtonRouter>
-                        <LabelButtonRouter label={this.props.label} path={`/${this.props.label}`}></LabelButtonRouter>
+                        <LabelButtonRouter label="Admin" path="/Admin"></LabelButtonRouter>
+                        <LabelButtonRouter label="Sign up" path="/App"></LabelButtonRouter>
                     </div>
                 </div>
             </div>

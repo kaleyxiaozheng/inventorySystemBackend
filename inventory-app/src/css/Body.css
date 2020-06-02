@@ -1,4 +1,15 @@
 .body-area {
     background-color: #099ae8;
-    height: 1000px;
+    height: 650px;
+    text-align: center;
+    font-size: x-large;
+}
+
+.compLogo {
+    width: 300px;
+    padding-top: 100px;
+}
+
+.adbLogo {
+    height: 50px;
 }
