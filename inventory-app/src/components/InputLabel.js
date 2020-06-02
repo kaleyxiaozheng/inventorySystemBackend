@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Form.css'; // Tell webpack that Button.js uses these styles
+import './css/InputLabel.css'; // Tell webpack that Button.js uses these styles
 
 export class InputLabel extends Component {
   constructor(props){

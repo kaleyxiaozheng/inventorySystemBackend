@@ -12,17 +12,14 @@
   color: black;
   text-align: left;
   text-indent: 60mm;
- 
   float: left;
 }
 
-.Access-app{
-  color: #78797a;
-  font-size: 18px;
+.Label-button{
   padding: 20px;
   float: right;
   padding-right: 200px;
-  font-weight: bold;
+  display: flex;
 }
 
 .Input-area{
