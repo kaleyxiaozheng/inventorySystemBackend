@@ -1,0 +1,24 @@
+.row:after{
+    clear:both;
+    display: table;
+    content:"";
+  }
+  
+  .row{
+    height: 60px;
+  }
+  
+  .App-title{
+    color: black;
+    text-align: left;
+    text-indent: 60mm;
+    float: left;
+  }
+  
+  .Label-button{
+    padding: 20px;
+    float: right;
+    padding-right: 200px;
+    display: flex;
+  }
+   
