@@ -1,3 +1,34 @@
 .adminArea {
-    background-color: red;
+    background-color:#099ae8;
+    height: 650px;
+    padding-top: 10px;
+}
+
+.adminTop {
+    height: 20%;
+}
+
+.adminBottom {
+    height: auto;
+}
+
+.adminTitle {
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.adminBorder {
+    background-color: white;
+    margin: auto;
+    height: 60%;
+    width: 40%;
+    border-radius: 5%;
+    line-height: 100px;
+    text-align: center;
+}
+
+.infoLabel {
+    height: 30px;
 }

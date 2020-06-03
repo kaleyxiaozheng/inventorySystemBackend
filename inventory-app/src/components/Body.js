@@ -5,10 +5,8 @@ import clientLogo from '../logo/ClientLogo.png';
 export class Body extends Component {
     render() {
         return (
-            <div>
-                <div className="bodyArea">
-                    <img className="clientLogo" src={clientLogo} />
-                </div>
+            <div className="bodyArea">
+                <img className="clientLogo" src={clientLogo} />
             </div>
         );
     }
