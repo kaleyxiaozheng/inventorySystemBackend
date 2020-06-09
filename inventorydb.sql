@@ -18,9 +18,9 @@ CREATE TABLE app_user (
     user_email VARCHAR(255) NOT NULL,
     user_phone INTEGER,
     user_photo BYTEA,
-    user_type INTEGER UNIQUE Not NULL,
-    user_role_id INTEGER UNIQUE NOT NULL,
-    user_department_id INTEGER UNIQUE NOT NULL,
+    user_type INTEGER  Not NULL,
+    user_role_id INTEGER  NOT NULL,
+    user_department_id INTEGER  NOT NULL,
     user_vehicle_id INTEGER
 );
 
@@ -42,7 +42,7 @@ CREATE TABLE product (
 CREATE TABLE category (
     category_id INTEGER UNIQUE NOT NULL,
     category_name VARCHAR(255) NOT NULL,
-    category_exc VARCHAR(255),
+    category_exc VARCHAR(255)
 );
 
 CREATE TABLE cart (
@@ -93,7 +93,7 @@ CREATE TABLE manufacturer (
     manufacturer_contact_number INTEGER,
     manufacturer_street_address VARCHAR(100) NOT NULL,
     manufacturer_suburb_id INTEGER NOT NULL,
-    manufacturer_city_id INTEGER NOT NULL,
+    manufacturer_city_id INTEGER NOT NULL
 );
 
 CREATE TABLE warehouse (
@@ -115,3 +115,22 @@ CREATE TABLE city (
     city_name VARCHAR(50) NOT NULL,
     city_state VARCHAR(50)
 );
+
+-- Insert data to user app_user table
+INSERT INTO app_user (user_id, given_name, family_name, user_password, user_email, user_phone, user_type, user_role_id, user_department_id)
+VALUES (1001, 'Aaron', 'Smith', '12345', 'aaronsmith@gmail.com', 0421211321, 0, 001, 101);
+
+INSERT INTO app_user (user_id, given_name, family_name, user_password, user_email, user_phone, user_type, user_role_id, user_department_id)
+VALUES (1002, 'Kate', 'Alex', '22222', 'katealex@gmail.com', 0421211453, 0, 002, 102);
+
+INSERT INTO app_user (user_id, given_name, family_name, user_password, user_email, user_phone, user_type, user_role_id, user_department_id)
+VALUES (1003, 'Enna', 'Cox', '11111', 'ennacox@gmail.com', 0421211543, 0, 001, 102);
+
+INSERT INTO role (role_id, role_name)
+VALUES (001, 'manager');
+
+INSERT INTO role (role_id, role_name)
+VALUES (002, 'employee');
+
+-- select 
+SELECT * FROM "app_user";
