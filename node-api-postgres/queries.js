@@ -3,12 +3,13 @@ const pool = new Pool({
     user:'postgres',
     host:'localhost',
     database:'inventorydb',
-    password:'postgres',
+    password:'my-postgres',
     port:5432,
 })
 
 const getUsers = (request, response) => {
-    pool.query('SELECT * FROM app_user ORDER BY user_id ASC', (error, results) => {
+    // pool.query('SELECT * FROM "app_user" ORDER BY user_id ASC', (error, results) => {
+        pool.query('SELECT * FROM "app_user"', (error, results) => {
         if(error){
             throw error
         }
@@ -34,7 +35,7 @@ const createUser = (request, response) => {
         if(error){
             throw error
         }
-        response.status(201).send('User add with ID: ${result.insertId}')
+        response.status(201).send(`User add with ID: ${result.insertId}`)
     })
 }
 
@@ -46,7 +47,7 @@ const updateUser = (request, response) => {
         if(error){
             throw error
         }
-        response.status(200).send('User modified with ID: ${user_id}')
+        response.status(200).send(`User modified with ID: ${user_id}`)
     })
 }
 
@@ -57,7 +58,7 @@ const deleteUser = (request, response) => {
         if(error){
             throw error
         }
-        response.status(200).send('User deleted with ID: ${user_id}')
+        response.status(200).send(`ser deleted with ID: ${user_id}`)
     })
 }
 
