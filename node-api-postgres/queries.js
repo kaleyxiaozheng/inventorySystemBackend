@@ -20,7 +20,7 @@ const getUsers = (request, response) => {
 const getUserById = (request, response) => {
     const user_id = parseInt(request.params.user_id)
 
-    pool.query('SELECT * FROM app_user WHERE user_id = $1', [user_id], (error, results)=> {
+    pool.query('SELECT * FROM "app_user" WHERE user_id = $1', [user_id], (error, results)=> {
         if(error){
             throw error
         }
