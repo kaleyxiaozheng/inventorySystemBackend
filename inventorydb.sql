@@ -12,29 +12,27 @@ CREATE TABLE department (
 
 CREATE TABLE app_user ( 
     user_id INTEGER UNIQUE NOT NULL,
-    given_name VARCHAR(50) NOT NULL,
-    family_name VARCHAR(50) NOT NULL,
-    user_password VARCHAR(255) NOT NULL,
-    user_email VARCHAR(255) NOT NULL,
+    given_name VARCHAR(50),
+    family_name VARCHAR(50),
+    user_password VARCHAR(255),
+    user_email VARCHAR(255),
     user_phone INTEGER,
     user_photo BYTEA,
-    user_type INTEGER  Not NULL,
-    user_role_id INTEGER  NOT NULL,
-    user_department_id INTEGER  NOT NULL,
+    user_type INTEGERL NOT NULL,
+    user_role_id INTEGER NOT NULL,
+    user_department_id INTEGER,
     user_vehicle_id INTEGER
 );
 
 CREATE TABLE product (
     product_id INTEGER UNIQUE NOT NULL,
-    product_category_id INTEGER NOT NULL,
+    product_category_id INTEGER,
     product_name VARCHAR(100) NOT NULL,
     product_description VARCHAR(255),
-    product_warehouse_id INTEGER,
     unit_price NUMERIC NOT NULL,
     gst NUMERIC,
     extra_cost NUMERIC,
     pur_price NUMERIC NOT NULL,
-    quantity INTEGER NOT NULL,
     supplier_id INTEGER,
     manufacturer_id INTEGER
 );
@@ -68,10 +66,11 @@ CREATE TABLE vehicle (
 CREATE TABLE app_order (
     order_no INTEGER UNIQUE NOT NULL,
     order_date DATE NOT NULL,
-    product_list JSON,
+    order_stock_product_id INTEGER NOT NULL,
+    stock_id INTEGER NOT NULL,
     expected_delivery_date DATE,
     total_price NUMERIC,
-    customer_information JSON,
+    order_user_id INTEGER NOT NULL,
     order_status INTEGER,
     invoice_no INTEGER UNIQUE
 );
@@ -114,6 +113,14 @@ CREATE TABLE city (
     city_id INTEGER UNIQUE NOT NULL,
     city_name VARCHAR(50) NOT NULL,
     city_state VARCHAR(50)
+);
+
+CREATE TABLE stock (
+    stock_id INTEGER UNIQUE NOT NULL,
+    stock_product_id INTEGER NOT NULL,
+    stock_warehouse_id INTEGER NOT NULL,
+    stock_quantity INTEGER,
+    stock_date DATE
 );
 
 -- Insert data to user app_user table
