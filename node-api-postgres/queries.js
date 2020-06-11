@@ -1,9 +1,14 @@
 const Pool = require('pg').Pool
 const pool = new Pool({
-    user:'postgres',
-    host:'localhost',
-    database:'inventorydb',
-    password:'my-postgres',
+    // user:'postgres',
+    // host:'localhost',
+    // database:'inventorydb',
+    // password:'my-postgres',
+    // port:5432,
+    user:'nithires_admin',
+    host:'vps.nithiresearch.com',
+    database:'nithires_aims',
+    password:'Pass12#$word',
     port:5432,
 })
 
