@@ -12,6 +12,7 @@ CREATE TABLE department (
 
 CREATE TABLE app_user ( 
     user_id INTEGER UNIQUE NOT NULL,
+    userName VARCHAR(100) UNIQUE NOT NULL,
     given_name VARCHAR(50),
     family_name VARCHAR(50),
     user_password VARCHAR(255),

@@ -7,6 +7,8 @@ const pool = new Pool({
     database:'inventorydb',
     password:'my-postgres',
     port:5432,
+
+// access to ADB database
     // user:'nithires_admin',
     // host:'vps.nithiresearch.com',
     // database:'nithires_aims',
