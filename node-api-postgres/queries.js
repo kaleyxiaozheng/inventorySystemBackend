@@ -1,15 +1,17 @@
+const { response } = require('express')
+
 const Pool = require('pg').Pool
 const pool = new Pool({
-    // user:'postgres',
-    // host:'localhost',
-    // database:'inventorydb',
-    // password:'my-postgres',
-    // port:5432,
-    user:'nithires_admin',
-    host:'vps.nithiresearch.com',
-    database:'nithires_aims',
-    password:'Pass12#$word',
+    user:'postgres',
+    host:'localhost',
+    database:'inventorydb',
+    password:'my-postgres',
     port:5432,
+    // user:'nithires_admin',
+    // host:'vps.nithiresearch.com',
+    // database:'nithires_aims',
+    // password:'Pass12#$word',
+    // port:5432,
 })
 
 const getUsers = (request, response) => {
@@ -67,10 +69,24 @@ const deleteUser = (request, response) => {
     })
 }
 
+const loginByUser = (request, response) => {
+    const {email, password} = request.body
+
+    pool.query('SELECT * FROM "app_user" WHERE user_email = $1 and user_password = $2', [email, password], (error, results)=> {
+        if(error){
+            throw error
+        }
+        console.log('request.body:', request.body)
+        console.log('Email: ', request.body.email, 'Password: ', resqest.body.password)
+        response.status(200).json(results.rows)
+    }) 
+}
+
 module.exports = {
     getUsers,
     getUserById,
     createUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    loginByUser 
 }
