@@ -72,9 +72,9 @@ const deleteUser = (request, response) => {
 }
 
 const loginByUser = (request, response) => {
-    const {email, password} = request.body
+    const {username, password} = request.body
 
-    pool.query('SELECT * FROM "app_user" WHERE user_email = $1 and user_password = $2', [email, password], (error, results)=> {
+    pool.query('SELECT * FROM "app_user" WHERE user_name = $1 and user_password = $2', [username, password], (error, results)=> {
         if(error){
             throw error
         }

@@ -12,14 +12,14 @@ CREATE TABLE department (
 
 CREATE TABLE app_user ( 
     user_id INTEGER UNIQUE NOT NULL,
-    userName VARCHAR(100) UNIQUE NOT NULL,
+    user_name VARCHAR(100) UNIQUE NOT NULL,
     given_name VARCHAR(50),
     family_name VARCHAR(50),
     user_password VARCHAR(255),
     user_email VARCHAR(255),
     user_phone INTEGER,
     user_photo BYTEA,
-    user_type INTEGERL NOT NULL,
+    user_type INTEGER NOT NULL,
     user_role_id INTEGER NOT NULL,
     user_department_id INTEGER,
     user_vehicle_id INTEGER
@@ -125,14 +125,14 @@ CREATE TABLE stock (
 );
 
 -- Insert data to user app_user table
-INSERT INTO app_user (user_id, given_name, family_name, user_password, user_email, user_phone, user_type, user_role_id, user_department_id)
-VALUES (1001, 'Aaron', 'Smith', '12345', 'aaronsmith@gmail.com', 0421211321, 0, 001, 101);
+INSERT INTO app_user (user_id, user_name, given_name, family_name, user_password, user_email, user_phone, user_type, user_role_id, user_department_id)
+VALUES (1001, 'aaronsmith', 'Aaron', 'Smith', '12345', 'aaronsmith@gmail.com', 0421211321, 0, 001, 101);
 
-INSERT INTO app_user (user_id, given_name, family_name, user_password, user_email, user_phone, user_type, user_role_id, user_department_id)
-VALUES (1002, 'Kate', 'Alex', '22222', 'katealex@gmail.com', 0421211453, 0, 002, 102);
+INSERT INTO app_user (user_id, user_name, given_name, family_name, user_password, user_email, user_phone, user_type, user_role_id, user_department_id)
+VALUES (1002, 'katealex', 'Kate', 'Alex', '22222', 'katealex@gmail.com', 0421211453, 0, 002, 102);
 
-INSERT INTO app_user (user_id, given_name, family_name, user_password, user_email, user_phone, user_type, user_role_id, user_department_id)
-VALUES (1003, 'Enna', 'Cox', '11111', 'ennacox@gmail.com', 0421211543, 0, 001, 102);
+INSERT INTO app_user (user_id, user_name, given_name, family_name, user_password, user_email, user_phone, user_type, user_role_id, user_department_id)
+VALUES (1003, 'ennacox', 'Enna', 'Cox', '11111', 'ennacox@gmail.com', 0421211543, 0, 001, 102);
 
 INSERT INTO role (role_id, role_name)
 VALUES (001, 'manager');
