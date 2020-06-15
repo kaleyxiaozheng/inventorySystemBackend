@@ -75,13 +75,16 @@ const loginByUser = (username, password) => {
   return new Promise((resolve, reject) => {
     pool.query('SELECT * FROM "app_user" WHERE user_name = $1 and user_password = $2', [username, password], (error, results) => {
       if (error) {
-        throw error
+        reject(error);
+        return;
       }
-      // match
-      // if (row.length ===0 ) {
-      //    throw (401 error)
-      // }
-      // console.log(results);
+
+      // check if user has been found
+      if (results.rows.length === 0 ) {
+         reject(new Error());
+         return;
+      }
+      console.log(results);
       const userInfor = results.rows[0];
       resolve(userInfor);
     });

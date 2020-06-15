@@ -31,6 +31,9 @@ app.post('/login', (request, response) => {
   const { username, password } = request.body;
   db.loginByUser(username, password).then((result) => {
     response.status(200).json(result);
+  }).catch ((error) => {
+    console.error("print error: ", error);
+    response.status(401).send('Unauthorized');
   });
 })
 app.put('/users/:user_id', db.updateUser)
