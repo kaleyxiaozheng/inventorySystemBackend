@@ -79,7 +79,6 @@ const loginByUser = (request, response) => {
             throw error
         }
         console.log('request.body:', request.body)
-        console.log('Email: ', request.body.email, 'Password: ', resqest.body.password)
         response.status(200).json(results.rows)
     }) 
 }
