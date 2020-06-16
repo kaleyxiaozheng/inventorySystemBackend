@@ -17,7 +17,6 @@ const pool = new Pool({
 })
 
 const getUsers = (request, response) => {
-  // pool.query('SELECT * FROM "app_user" ORDER BY user_id ASC', (error, results) => {
   pool.query('SELECT * FROM "app_user"', (error, results) => {
     if (error) {
       throw error
