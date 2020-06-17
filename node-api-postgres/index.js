@@ -5,7 +5,6 @@ const db = require('./queries')
 const port = 5000
 const cors = require('cors')
 
-
 app.use(cors())
 
 // const corsOptions = {
